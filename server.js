@@ -20,12 +20,16 @@ app.use((req, res,next) =>{
   next();
 });
 
-app.use((req,res,next) =>{
-  res.render('maintenance.hbs',{
-    pageTitle : 'Maintenance Page',
-    welcomeMessage : 'page is under maintenance'
-  });
-});
+
+// // maintenance middleware
+// app.use((req,res,next) =>{
+//   res.render('maintenance.hbs',{
+//     pageTitle : 'Maintenance Page',
+//     welcomeMessage : 'page is under maintenance'
+//   });
+// });
+
+
 app.use(express.static(__dirname + '/public'));
 
 
