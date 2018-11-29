@@ -57,6 +57,13 @@ app.get('/about',(req,res)=>{
   });
 });
 
+app.get('/projects', function (req, res){
+  res.render('projects.hbs',{
+    pageTitle : 'Projects Page',
+    welcomeMessage : "here are some projects"
+  });
+});
+
 // /bad - send back json with errorMessage
 app.get('/bad',function (req, res, next) {
   res.send({
